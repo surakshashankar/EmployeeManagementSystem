@@ -108,7 +108,6 @@ class EmployeeServiceImplTest {
   @Test
   void testDeleteEmployeeDetails_SUCCESS() {
 
-//    Mockito.when(employeeDetailsRepository.deleteById(123)).thenReturn(employeeDetails);
     doNothing().when(employeeDetailsRepository).deleteById(123);
 
     String finalResult = employeeService.deleteEmployeeDetails(123);
@@ -146,8 +145,6 @@ class EmployeeServiceImplTest {
 
     Roles roles = new Roles();
     roles.setRole("Engineering");
-
-//    Mockito.when(rolesNameRepository.findById(14)).thenReturn(Optional.of(roles));
 
     String finalResult = employeeService.addRolesName(roles);
 
